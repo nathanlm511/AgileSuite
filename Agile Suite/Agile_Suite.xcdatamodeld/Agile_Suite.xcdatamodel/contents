@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17510.1" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Audio" representedClassName=".Audio" syncable="YES">
+        <attribute name="voiceRecording" optional="YES" attributeType="Binary"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="audio" inverseEntity="Project"/>
+    </entity>
+    <entity name="Photo" representedClassName=".Photo" syncable="YES">
+        <attribute name="projectPhoto" optional="YES" attributeType="Binary"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="photo" inverseEntity="Project"/>
+    </entity>
+    <entity name="Project" representedClassName=".Project" syncable="YES">
+        <attribute name="d_escription" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="technologies" optional="YES" attributeType="String"/>
+        <relationship name="audio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Audio" inverseName="project" inverseEntity="Audio"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="project" inverseEntity="Photo"/>
+    </entity>
+    <elements>
+        <element name="Project" positionX="88.0078125" positionY="17.01953125" width="128" height="133"/>
+        <element name="Photo" positionX="291.96484375" positionY="126.96875" width="128" height="73"/>
+        <element name="Audio" positionX="287.90234375" positionY="-16.0078125" width="128" height="73"/>
+    </elements>
 </model>
