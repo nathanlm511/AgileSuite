@@ -14,6 +14,7 @@
 		B711D77125618ED700F8158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B711D77025618ED700F8158B /* Assets.xcassets */; };
 		B711D77425618ED700F8158B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B711D77325618ED700F8158B /* Preview Assets.xcassets */; };
 		B711D77725618ED700F8158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B711D77525618ED700F8158B /* LaunchScreen.storyboard */; };
+		B711D7882561952000F8158B /* QuoteStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D7872561952000F8158B /* QuoteStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B711D77325618ED700F8158B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B711D77625618ED700F8158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B711D77825618ED700F8158B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B711D7872561952000F8158B /* QuoteStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,15 @@
 		B711D76625618ED600F8158B /* Agile Suite */ = {
 			isa = PBXGroup;
 			children = (
-				B711D76725618ED600F8158B /* AppDelegate.swift */,
-				B711D76925618ED600F8158B /* SceneDelegate.swift */,
+				B711D783256194AD00F8158B /* Tab Bar Views */,
+				B711D782256194A100F8158B /* Supporting Files */,
+				B711D7812561949A00F8158B /* Core Data Model */,
+				B711D7802561947A00F8158B /* Data Model */,
+				B711D77F2561947100F8158B /* Delegates */,
 				B711D76B25618ED600F8158B /* ContentView.swift */,
 				B711D77025618ED700F8158B /* Assets.xcassets */,
 				B711D77525618ED700F8158B /* LaunchScreen.storyboard */,
 				B711D77825618ED700F8158B /* Info.plist */,
-				B711D76D25618ED600F8158B /* Agile_Suite.xcdatamodeld */,
 				B711D77225618ED700F8158B /* Preview Content */,
 			);
 			path = "Agile Suite";
@@ -76,6 +80,45 @@
 				B711D77325618ED700F8158B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B711D77F2561947100F8158B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B711D76925618ED600F8158B /* SceneDelegate.swift */,
+				B711D76725618ED600F8158B /* AppDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B711D7802561947A00F8158B /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				B711D7872561952000F8158B /* QuoteStruct.swift */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		B711D7812561949A00F8158B /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				B711D76D25618ED600F8158B /* Agile_Suite.xcdatamodeld */,
+			);
+			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		B711D782256194A100F8158B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B711D783256194AD00F8158B /* Tab Bar Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Tab Bar Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +195,7 @@
 				B711D76A25618ED600F8158B /* SceneDelegate.swift in Sources */,
 				B711D76C25618ED600F8158B /* ContentView.swift in Sources */,
 				B711D76F25618ED600F8158B /* Agile_Suite.xcdatamodeld in Sources */,
+				B711D7882561952000F8158B /* QuoteStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
