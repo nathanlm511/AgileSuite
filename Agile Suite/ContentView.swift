@@ -9,9 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, Agile Suite!")
-            .padding()
-    }
+        TabView {
+            NonWork()
+                .tabItem {
+                    Image(systemName: "paperplane")
+                    Text("Break")
+                }
+        }   // End of TabView
+            .font(.headline)
+            .imageScale(.medium)
+            .font(Font.title.weight(.regular))    }
 }
 
 struct ContentView_Previews: PreviewProvider {
