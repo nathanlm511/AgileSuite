@@ -11,6 +11,9 @@ import Combine
 import SwiftUI
  
 final class UserData: ObservableObject {
+    
+    // ❎ Subscribe to notification that the managedObjectContext completed a save
+        @Published var savedInTicketsDatabase =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
  
     // Instance Variables for Game Play Duration Timer
     var durationTimer = Timer()

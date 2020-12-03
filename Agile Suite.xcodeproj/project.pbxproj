@@ -24,6 +24,14 @@
 		B79257E42576D24700E07151 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257E32576D24700E07151 /* Quotes.swift */; };
 		B79257E72576D24E00E07151 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257E62576D24E00E07151 /* Game.swift */; };
 		B79257EB2576D89700E07151 /* QuoteApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257EA2576D89700E07151 /* QuoteApiData.swift */; };
+		B79257F02578317900E07151 /* TicketsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257EF2578317900E07151 /* TicketsList.swift */; };
+		B79257F4257832D900E07151 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257F3257832D900E07151 /* Ticket.swift */; };
+		B79257FB2578338A00E07151 /* TicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257FA2578338A00E07151 /* TicketData.swift */; };
+		B79257FE257833D300E07151 /* TicketStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257FD257833D300E07151 /* TicketStruct.swift */; };
+		B7925809257834F900E07151 /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = B7925808257834F900E07151 /* TicketData.json */; };
+		B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792580B2578366800E07151 /* UtilityFunctions.swift */; };
+		B792580F2578379900E07151 /* TicketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792580E2578379900E07151 /* TicketItem.swift */; };
+		B792581325783A5F00E07151 /* TicketDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792581225783A5F00E07151 /* TicketDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		B79257E32576D24700E07151 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		B79257E62576D24E00E07151 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B79257EA2576D89700E07151 /* QuoteApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteApiData.swift; sourceTree = "<group>"; };
+		B79257EF2578317900E07151 /* TicketsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsList.swift; sourceTree = "<group>"; };
+		B79257F3257832D900E07151 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		B79257FA2578338A00E07151 /* TicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketData.swift; sourceTree = "<group>"; };
+		B79257FD257833D300E07151 /* TicketStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStruct.swift; sourceTree = "<group>"; };
+		B7925808257834F900E07151 /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TicketData.json; sourceTree = "<group>"; };
+		B792580B2578366800E07151 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
+		B792580E2578379900E07151 /* TicketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketItem.swift; sourceTree = "<group>"; };
+		B792581225783A5F00E07151 /* TicketDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +132,12 @@
 		B711D7802561947A00F8158B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7925808257834F900E07151 /* TicketData.json */,
 				B711D7872561952000F8158B /* QuoteStruct.swift */,
 				B79257D72576CFD900E07151 /* UserData.swift */,
 				B79257DA2576D07500E07151 /* TimerData.swift */,
+				B79257FA2578338A00E07151 /* TicketData.swift */,
+				B79257FD257833D300E07151 /* TicketStruct.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -127,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B711D76D25618ED600F8158B /* Agile_Suite.xcdatamodeld */,
+				B79257F3257832D900E07151 /* Ticket.swift */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
@@ -134,6 +154,7 @@
 		B711D782256194A100F8158B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B792580B2578366800E07151 /* UtilityFunctions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,6 +162,7 @@
 		B711D783256194AD00F8158B /* Tab Bar Views */ = {
 			isa = PBXGroup;
 			children = (
+				B79257EE257830E200E07151 /* Tickets */,
 				B79257D22576CE5D00E07151 /* Break */,
 			);
 			name = "Tab Bar Views";
@@ -171,6 +193,16 @@
 				B79257EA2576D89700E07151 /* QuoteApiData.swift */,
 			);
 			name = "API Data";
+			sourceTree = "<group>";
+		};
+		B79257EE257830E200E07151 /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				B79257EF2578317900E07151 /* TicketsList.swift */,
+				B792580E2578379900E07151 /* TicketItem.swift */,
+				B792581225783A5F00E07151 /* TicketDetails.swift */,
+			);
+			name = Tickets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +265,7 @@
 			files = (
 				B711D77725618ED700F8158B /* LaunchScreen.storyboard in Resources */,
 				B711D77425618ED700F8158B /* Preview Assets.xcassets in Resources */,
+				B7925809257834F900E07151 /* TicketData.json in Resources */,
 				B711D77125618ED700F8158B /* Assets.xcassets in Resources */,
 				B79257DE2576D0B700E07151 /* Sound Files in Resources */,
 			);
@@ -250,13 +283,20 @@
 				B79257E42576D24700E07151 /* Quotes.swift in Sources */,
 				B79257D82576CFD900E07151 /* UserData.swift in Sources */,
 				B711D76A25618ED600F8158B /* SceneDelegate.swift in Sources */,
+				B79257F4257832D900E07151 /* Ticket.swift in Sources */,
+				B79257FE257833D300E07151 /* TicketStruct.swift in Sources */,
 				B711D76C25618ED600F8158B /* ContentView.swift in Sources */,
+				B792580F2578379900E07151 /* TicketItem.swift in Sources */,
 				B79257E72576D24E00E07151 /* Game.swift in Sources */,
 				B79257EB2576D89700E07151 /* QuoteApiData.swift in Sources */,
+				B79257FB2578338A00E07151 /* TicketData.swift in Sources */,
 				B79257DB2576D07500E07151 /* TimerData.swift in Sources */,
+				B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */,
 				B711D76F25618ED600F8158B /* Agile_Suite.xcdatamodeld in Sources */,
+				B79257F02578317900E07151 /* TicketsList.swift in Sources */,
 				B79257E12576D14E00E07151 /* NonWork.swift in Sources */,
 				B711D7882561952000F8158B /* QuoteStruct.swift in Sources */,
+				B792581325783A5F00E07151 /* TicketDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

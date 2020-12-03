@@ -26,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ****************************
         */
         obtainQuoteDataFromApi()
+        /*
+        ************************************
+        *   Create Tickets Database   *
+        ************************************
+        */
+        createTicketsDatabase()     // Given in TripsData.swift
        
         return true
     }
