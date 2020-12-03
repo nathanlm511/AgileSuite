@@ -2,7 +2,7 @@
 //  UtilityFunctions.swift
 //  Agile Suite
 //
-//  Created by CS3714 on 12/2/20.
+//  Created by Thuc Phan on 12/3/20.
 //  Copyright © 2020 Nathan Moeliono, Tommy Phan, Mariam Naseem. All rights reserved.
 //
 
@@ -161,4 +161,28 @@ public func getImageFromUrl(url: String, defaultFilename: String) -> Image {
  
     return imageObtainedFromUrl
 }
-
+ 
+/*
+**********************************
+MARK: - Get Image from Binary Data
+**********************************
+*/
+public func getImageFromBinaryData(binaryData: Data?, defaultFilename: String) -> Image {
+  
+    // Create a UIImage object from binaryData
+    let uiImage = UIImage(data: binaryData!)
+  
+    // Unwrap uiImage to see if it has a value
+    if let imageObtained = uiImage {
+      
+        // Image is successfully obtained
+        return Image(uiImage: imageObtained)
+      
+    } else {
+        /*
+         Image file with name 'defaultFilename' is returned if the image cannot be obtained
+         from the binaryData given. Image file 'defaultFilename' must be given in Assets.xcassets
+         */
+        return Image(defaultFilename)
+    }
+}

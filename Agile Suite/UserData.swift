@@ -14,7 +14,8 @@ final class UserData: ObservableObject {
     
     // ❎ Subscribe to notification that the managedObjectContext completed a save
     @Published var savedInTicketsDatabase =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
- 
+    // Publish if the user is authenticated or not
+    @Published var userAuthenticated = false
     // Instance Variables for Game Play Duration Timer
     var durationTimer = Timer()
     var startTime: Double = 0
