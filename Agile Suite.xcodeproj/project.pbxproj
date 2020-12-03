@@ -16,8 +16,6 @@
 		6951BE8B257949F900272C2D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6951BE8A257949F900272C2D /* Project.swift */; };
 		6951BE8E25794A8D00272C2D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6951BE8D25794A8D00272C2D /* Photo.swift */; };
 		6951BE9125794AEA00272C2D /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6951BE9025794AEA00272C2D /* Audio.swift */; };
-		6951BE9525794E3900272C2D /* PastProjectsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6951BE9425794E3900272C2D /* PastProjectsData.swift */; };
-		6951BE9825794E8A00272C2D /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6951BE9725794E8A00272C2D /* UtilityFunctions.swift */; };
 		B711D76825618ED600F8158B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D76725618ED600F8158B /* AppDelegate.swift */; };
 		B711D76A25618ED600F8158B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D76925618ED600F8158B /* SceneDelegate.swift */; };
 		B711D76C25618ED600F8158B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D76B25618ED600F8158B /* ContentView.swift */; };
@@ -38,11 +36,10 @@
 		B79257F4257832D900E07151 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257F3257832D900E07151 /* Ticket.swift */; };
 		B79257FB2578338A00E07151 /* TicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257FA2578338A00E07151 /* TicketData.swift */; };
 		B79257FE257833D300E07151 /* TicketStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257FD257833D300E07151 /* TicketStruct.swift */; };
-		B7925809257834F900E07151 /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = B7925808257834F900E07151 /* TicketData.json */; };
-		B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792580B2578366800E07151 /* UtilityFunctions.swift */; };
 		B792580F2578379900E07151 /* TicketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792580E2578379900E07151 /* TicketItem.swift */; };
 		B792581325783A5F00E07151 /* TicketDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792581225783A5F00E07151 /* TicketDetails.swift */; };
 		B79258162578831900E07151 /* AddTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79258152578831900E07151 /* AddTicket.swift */; };
+		B792581D2579641700E07151 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792581C2579641700E07151 /* UtilityFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +53,6 @@
 		6951BE8D25794A8D00272C2D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		6951BE9025794AEA00272C2D /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		6951BE9425794E3900272C2D /* PastProjectsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastProjectsData.swift; sourceTree = "<group>"; };
-		6951BE9725794E8A00272C2D /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		B711D76425618ED600F8158B /* Agile Suite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agile Suite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B711D76725618ED600F8158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B711D76925618ED600F8158B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +80,7 @@
 		B792580E2578379900E07151 /* TicketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketItem.swift; sourceTree = "<group>"; };
 		B792581225783A5F00E07151 /* TicketDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetails.swift; sourceTree = "<group>"; };
 		B79258152578831900E07151 /* AddTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicket.swift; sourceTree = "<group>"; };
+		B792581C2579641700E07151 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +195,7 @@
 		B711D782256194A100F8158B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6951BE9725794E8A00272C2D /* UtilityFunctions.swift */,
+				B792581C2579641700E07151 /* UtilityFunctions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -323,7 +320,6 @@
 				B711D77725618ED700F8158B /* LaunchScreen.storyboard in Resources */,
 				6951BE852579427B00272C2D /* PastProjectsData.json in Resources */,
 				B711D77425618ED700F8158B /* Preview Assets.xcassets in Resources */,
-				B7925809257834F900E07151 /* TicketData.json in Resources */,
 				B711D77125618ED700F8158B /* Assets.xcassets in Resources */,
 				B79257DE2576D0B700E07151 /* Sound Files in Resources */,
 			);
@@ -338,7 +334,6 @@
 			files = (
 				B711D76825618ED600F8158B /* AppDelegate.swift in Sources */,
 				6951BE762578BC0600272C2D /* MainView.swift in Sources */,
-				6951BE9525794E3900272C2D /* PastProjectsData.swift in Sources */,
 				6951BE882579485900272C2D /* PastProjectStruct.swift in Sources */,
 				B79257D42576CF0E00E07151 /* Break.swift in Sources */,
 				6951BE9125794AEA00272C2D /* Audio.swift in Sources */,
@@ -350,8 +345,8 @@
 				B79257FE257833D300E07151 /* TicketStruct.swift in Sources */,
 				B711D76C25618ED600F8158B /* ContentView.swift in Sources */,
 				B792580F2578379900E07151 /* TicketItem.swift in Sources */,
+				B792581D2579641700E07151 /* UtilityFunctions.swift in Sources */,
 				B79257E72576D24E00E07151 /* Game.swift in Sources */,
-				6951BE9825794E8A00272C2D /* UtilityFunctions.swift in Sources */,
 				6951BE792578BD5A00272C2D /* LoginView.swift in Sources */,
 				6951BE7D2578BEC600272C2D /* Settings.swift in Sources */,
 				6951BE8E25794A8D00272C2D /* Photo.swift in Sources */,
@@ -359,7 +354,6 @@
 				B79258162578831900E07151 /* AddTicket.swift in Sources */,
 				B79257FB2578338A00E07151 /* TicketData.swift in Sources */,
 				B79257DB2576D07500E07151 /* TimerData.swift in Sources */,
-				B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */,
 				B79257F02578317900E07151 /* TicketsList.swift in Sources */,
 				B79257E12576D14E00E07151 /* NonWork.swift in Sources */,
 				B711D7882561952000F8158B /* QuoteStruct.swift in Sources */,

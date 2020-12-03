@@ -186,3 +186,4 @@ public func getImageFromBinaryData(binaryData: Data?, defaultFilename: String) -
         return Image(defaultFilename)
     }
 }
+
