@@ -21,7 +21,6 @@
 		B711D76825618ED600F8158B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D76725618ED600F8158B /* AppDelegate.swift */; };
 		B711D76A25618ED600F8158B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D76925618ED600F8158B /* SceneDelegate.swift */; };
 		B711D76C25618ED600F8158B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D76B25618ED600F8158B /* ContentView.swift */; };
-		B711D76F25618ED600F8158B /* Agile_Suite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B711D76D25618ED600F8158B /* Agile_Suite.xcdatamodeld */; };
 		B711D77125618ED700F8158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B711D77025618ED700F8158B /* Assets.xcassets */; };
 		B711D77425618ED700F8158B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B711D77325618ED700F8158B /* Preview Assets.xcassets */; };
 		B711D77725618ED700F8158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B711D77525618ED700F8158B /* LaunchScreen.storyboard */; };
@@ -62,7 +61,6 @@
 		B711D76725618ED600F8158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B711D76925618ED600F8158B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B711D76B25618ED600F8158B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B711D76E25618ED600F8158B /* Agile_Suite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agile_Suite.xcdatamodel; sourceTree = "<group>"; };
 		B711D77025618ED700F8158B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B711D77325618ED700F8158B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B711D77625618ED700F8158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,6 +123,7 @@
 				B711D76625618ED600F8158B /* Agile Suite */,
 				B711D76525618ED600F8158B /* Products */,
 				B79257C32566324400E07151 /* Frameworks */,
+				B7925818257961F100E07151 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,7 +187,6 @@
 		B711D7812561949A00F8158B /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				B711D76D25618ED600F8158B /* Agile_Suite.xcdatamodeld */,
 				B79257F3257832D900E07151 /* Ticket.swift */,
 				6951BE8A257949F900272C2D /* Project.swift */,
 				6951BE8D25794A8D00272C2D /* Photo.swift */,
@@ -252,6 +250,16 @@
 				B79258152578831900E07151 /* AddTicket.swift */,
 			);
 			name = Tickets;
+			sourceTree = "<group>";
+		};
+		B7925818257961F100E07151 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6951BE9425794E3900272C2D /* PastProjectsData.swift */,
+				B792580B2578366800E07151 /* UtilityFunctions.swift */,
+				B7925808257834F900E07151 /* TicketData.json */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,7 +360,6 @@
 				B79257FB2578338A00E07151 /* TicketData.swift in Sources */,
 				B79257DB2576D07500E07151 /* TimerData.swift in Sources */,
 				B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */,
-				B711D76F25618ED600F8158B /* Agile_Suite.xcdatamodeld in Sources */,
 				B79257F02578317900E07151 /* TicketsList.swift in Sources */,
 				B79257E12576D14E00E07151 /* NonWork.swift in Sources */,
 				B711D7882561952000F8158B /* QuoteStruct.swift in Sources */,
@@ -561,19 +568,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B711D76D25618ED600F8158B /* Agile_Suite.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B711D76E25618ED600F8158B /* Agile_Suite.xcdatamodel */,
-			);
-			currentVersion = B711D76E25618ED600F8158B /* Agile_Suite.xcdatamodel */;
-			path = Agile_Suite.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B711D75C25618ED600F8158B /* Project object */;
 }
