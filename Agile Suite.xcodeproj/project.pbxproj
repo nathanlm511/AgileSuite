@@ -32,6 +32,7 @@
 		B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792580B2578366800E07151 /* UtilityFunctions.swift */; };
 		B792580F2578379900E07151 /* TicketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792580E2578379900E07151 /* TicketItem.swift */; };
 		B792581325783A5F00E07151 /* TicketDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792581225783A5F00E07151 /* TicketDetails.swift */; };
+		B79258162578831900E07151 /* AddTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79258152578831900E07151 /* AddTicket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		B792580B2578366800E07151 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		B792580E2578379900E07151 /* TicketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketItem.swift; sourceTree = "<group>"; };
 		B792581225783A5F00E07151 /* TicketDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetails.swift; sourceTree = "<group>"; };
+		B79258152578831900E07151 /* AddTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				B79257EF2578317900E07151 /* TicketsList.swift */,
 				B792580E2578379900E07151 /* TicketItem.swift */,
 				B792581225783A5F00E07151 /* TicketDetails.swift */,
+				B79258152578831900E07151 /* AddTicket.swift */,
 			);
 			name = Tickets;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				B792580F2578379900E07151 /* TicketItem.swift in Sources */,
 				B79257E72576D24E00E07151 /* Game.swift in Sources */,
 				B79257EB2576D89700E07151 /* QuoteApiData.swift in Sources */,
+				B79258162578831900E07151 /* AddTicket.swift in Sources */,
 				B79257FB2578338A00E07151 /* TicketData.swift in Sources */,
 				B79257DB2576D07500E07151 /* TimerData.swift in Sources */,
 				B792580C2578366800E07151 /* UtilityFunctions.swift in Sources */,
