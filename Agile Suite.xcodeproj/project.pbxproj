@@ -24,7 +24,7 @@
 		B711D77725618ED700F8158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B711D77525618ED700F8158B /* LaunchScreen.storyboard */; };
 		B711D7882561952000F8158B /* QuoteStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D7872561952000F8158B /* QuoteStruct.swift */; };
 		B76967082579688000CBE4AC /* Agile_Suite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76967062579688000CBE4AC /* Agile_Suite.xcdatamodeld */; };
-		B7756DA52579670A00B421CA /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = B7756DA42579670A00B421CA /* TicketData.json */; };
+		B769671125796C5A00CBE4AC /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = B769671025796C5A00CBE4AC /* TicketData.json */; };
 		B79257C52566324400E07151 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79257C42566324400E07151 /* CloudKit.framework */; };
 		B79257D42576CF0E00E07151 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D32576CF0E00E07151 /* Break.swift */; };
 		B79257D82576CFD900E07151 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D72576CFD900E07151 /* UserData.swift */; };
@@ -65,7 +65,7 @@
 		B711D77825618ED700F8158B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B711D7872561952000F8158B /* QuoteStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStruct.swift; sourceTree = "<group>"; };
 		B76967072579688000CBE4AC /* Agile_Suite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agile_Suite.xcdatamodel; sourceTree = "<group>"; };
-		B7756DA42579670A00B421CA /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TicketData.json; path = ../../../Downloads/TicketData.json; sourceTree = "<group>"; };
+		B769671025796C5A00CBE4AC /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TicketData.json; path = ../../../.Trash/TicketData.json; sourceTree = "<group>"; };
 		B79257C42566324400E07151 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B79257D32576CF0E00E07151 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		B79257D72576CFD900E07151 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		B711D7802561947A00F8158B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				B7756DA42579670A00B421CA /* TicketData.json */,
+				B769671025796C5A00CBE4AC /* TicketData.json */,
 				B79257FA2578338A00E07151 /* TicketData.swift */,
 				B79257FD257833D300E07151 /* TicketStruct.swift */,
 				6951BE842579427B00272C2D /* PastProjectsData.json */,
@@ -328,7 +328,7 @@
 				B711D77425618ED700F8158B /* Preview Assets.xcassets in Resources */,
 				B711D77125618ED700F8158B /* Assets.xcassets in Resources */,
 				B79257DE2576D0B700E07151 /* Sound Files in Resources */,
-				B7756DA52579670A00B421CA /* TicketData.json in Resources */,
+				B769671125796C5A00CBE4AC /* TicketData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
