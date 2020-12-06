@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ************************************
         */
         createTicketsDatabase()     // Given in TripsData.swift
+        createStatsDatabase()
        
         return true
     }

@@ -192,7 +192,25 @@ struct AddTicket: View {
         } catch {
             return
         }
-       
+        
+        // save to statistics
+        let fetchRequestPublisher = NSFetchRequest<Stats>(entityName: "Stats")
+        var arr = [Stats]()
+        var statsFound = Stats()
+        do {
+            //-----------------------------
+            // ❎ Execute the Fetch Request
+            //-----------------------------
+            arr = try managedObjectContext.fetch(fetchRequestPublisher)
+            statsFound = arr[0]
+            
+            statsFound.ticketsCompleted.append(3)
+            try self.managedObjectContext.save()
+            
+        } catch {
+            print("Stats entity fetch failed!")
+        }
+           
     }   // End of function
    
 }

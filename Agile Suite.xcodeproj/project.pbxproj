@@ -25,6 +25,9 @@
 		B711D7882561952000F8158B /* QuoteStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711D7872561952000F8158B /* QuoteStruct.swift */; };
 		B76967082579688000CBE4AC /* Agile_Suite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76967062579688000CBE4AC /* Agile_Suite.xcdatamodeld */; };
 		B769671125796C5A00CBE4AC /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = B769671025796C5A00CBE4AC /* TicketData.json */; };
+		B7696714257C3E5B00CBE4AC /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7696713257C3E5B00CBE4AC /* Statistics.swift */; };
+		B7696717257C5C7000CBE4AC /* StatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7696716257C5C7000CBE4AC /* StatsData.swift */; };
+		B769671B257C5DCB00CBE4AC /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769671A257C5DCB00CBE4AC /* Graphs.swift */; };
 		B79257C52566324400E07151 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79257C42566324400E07151 /* CloudKit.framework */; };
 		B79257D42576CF0E00E07151 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D32576CF0E00E07151 /* Break.swift */; };
 		B79257D82576CFD900E07151 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D72576CFD900E07151 /* UserData.swift */; };
@@ -66,6 +69,9 @@
 		B711D7872561952000F8158B /* QuoteStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStruct.swift; sourceTree = "<group>"; };
 		B76967072579688000CBE4AC /* Agile_Suite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agile_Suite.xcdatamodel; sourceTree = "<group>"; };
 		B769671025796C5A00CBE4AC /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TicketData.json; path = ../../../.Trash/TicketData.json; sourceTree = "<group>"; };
+		B7696713257C3E5B00CBE4AC /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		B7696716257C5C7000CBE4AC /* StatsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsData.swift; sourceTree = "<group>"; };
+		B769671A257C5DCB00CBE4AC /* Graphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphs.swift; sourceTree = "<group>"; };
 		B79257C42566324400E07151 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B79257D32576CF0E00E07151 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		B79257D72576CFD900E07151 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				B79257D72576CFD900E07151 /* UserData.swift */,
 				B79257DA2576D07500E07151 /* TimerData.swift */,
 				6951BE872579485900272C2D /* PastProjectStruct.swift */,
+				B7696716257C5C7000CBE4AC /* StatsData.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -194,6 +201,7 @@
 				6951BE8D25794A8D00272C2D /* Photo.swift */,
 				6951BE9025794AEA00272C2D /* Audio.swift */,
 				B76967062579688000CBE4AC /* Agile_Suite.xcdatamodeld */,
+				B7696713257C3E5B00CBE4AC /* Statistics.swift */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
@@ -209,12 +217,21 @@
 		B711D783256194AD00F8158B /* Tab Bar Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7696719257C5DA100CBE4AC /* Statistics */,
 				B79257EE257830E200E07151 /* Tickets */,
 				6951BE7B2578BEB500272C2D /* Settings */,
 				6951BE742578BADD00272C2D /* Startup Views */,
 				B79257D22576CE5D00E07151 /* Break */,
 			);
 			name = "Tab Bar Views";
+			sourceTree = "<group>";
+		};
+		B7696719257C5DA100CBE4AC /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				B769671A257C5DCB00CBE4AC /* Graphs.swift */,
+			);
+			name = Statistics;
 			sourceTree = "<group>";
 		};
 		B79257C32566324400E07151 /* Frameworks */ = {
@@ -342,12 +359,14 @@
 				B711D76825618ED600F8158B /* AppDelegate.swift in Sources */,
 				6951BE762578BC0600272C2D /* MainView.swift in Sources */,
 				6951BE882579485900272C2D /* PastProjectStruct.swift in Sources */,
+				B7696717257C5C7000CBE4AC /* StatsData.swift in Sources */,
 				B79257D42576CF0E00E07151 /* Break.swift in Sources */,
 				6951BE9125794AEA00272C2D /* Audio.swift in Sources */,
 				B79257E42576D24700E07151 /* Quotes.swift in Sources */,
 				6951BE802578BED100272C2D /* PasswordReset.swift in Sources */,
 				B76967082579688000CBE4AC /* Agile_Suite.xcdatamodeld in Sources */,
 				B79257D82576CFD900E07151 /* UserData.swift in Sources */,
+				B769671B257C5DCB00CBE4AC /* Graphs.swift in Sources */,
 				B711D76A25618ED600F8158B /* SceneDelegate.swift in Sources */,
 				B79257F4257832D900E07151 /* Ticket.swift in Sources */,
 				B79257FE257833D300E07151 /* TicketStruct.swift in Sources */,
@@ -363,6 +382,7 @@
 				B79257FB2578338A00E07151 /* TicketData.swift in Sources */,
 				B79257DB2576D07500E07151 /* TimerData.swift in Sources */,
 				B79257F02578317900E07151 /* TicketsList.swift in Sources */,
+				B7696714257C3E5B00CBE4AC /* Statistics.swift in Sources */,
 				B79257E12576D14E00E07151 /* NonWork.swift in Sources */,
 				B711D7882561952000F8158B /* QuoteStruct.swift in Sources */,
 				B792581325783A5F00E07151 /* TicketDetails.swift in Sources */,
