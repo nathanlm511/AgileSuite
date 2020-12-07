@@ -5,7 +5,15 @@
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
         "company": "Amazon",
-        "projectPhoto": "Lorem Ipsum"
+        "photo": "amazon"
+    },
+    {
+        "name": "Lorem Ipsum",
+        "dateCreated": "Lorem Ipsum",
+        "d_escription": "Lorem Ipsum",
+        "technologies": "Lorem Ipsum",
+        "company": "Qualcomm",
+        "photo": "qualcomm"
     },
     {
         "name": "Lorem Ipsum",
@@ -13,7 +21,7 @@
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
         "company": "Facebook",
-        "projectPhoto": "Lorem Ipsum"
+        "photo": "facebook"
     },
     {
         "name": "Lorem Ipsum",
@@ -21,15 +29,15 @@
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
         "company": "BP",
-        "projectPhoto": "Lorem Ipsum"
+        "photo": "bp"
     },
     {
         "name": "Lorem Ipsum",
         "dateCreated": "Lorem Ipsum",
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
-        "company": "American Express,
-        "projectPhoto": "Lorem Ipsum"
+        "company": "American Express",
+        "photo": "americanexpress"
     },
     {
         "name": "Lorem Ipsum",
@@ -37,15 +45,15 @@
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
         "company": "Adobe",
-        "projectPhoto": "Lorem Ipsum"
+        "photo": "adobe"
     },
     {
         "name": "Lorem Ipsum",
         "dateCreated": "Lorem Ipsum",
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
-        "company": "Beats,
-        "projectPhoto": "Lorem Ipsum"
+        "company": "Beats",
+        "photo": "beats"
     },
     {
         "name": "Lorem Ipsum",
@@ -53,14 +61,14 @@
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
         "company": "Acer",
-        "projectPhoto": "Lorem Ipsum"
+        "photo": "acer"
     },
     {
         "name": "Lorem Ipsum",
         "dateCreated": "Lorem Ipsum",
         "d_escription": "Lorem Ipsum",
         "technologies": "Lorem Ipsum",
-        "company": "Microsoft,
-        "projectPhoto": "Lorem Ipsum"
+        "company": "Microsoft",
+        "photo": "microsoft"
     }
 ]

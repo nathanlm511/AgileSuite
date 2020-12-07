@@ -38,7 +38,7 @@ extension Project {
      The 'static' keyword designates the func as a class method invoked by using the
      class name as Song.allSongsFetchRequest() in any .swift file in your project.
      */
-    static func allTripsFetchRequest() -> NSFetchRequest<Project> {
+    static func allProjectsFetchRequest() -> NSFetchRequest<Project> {
         
         let request: NSFetchRequest<Project> = Project.fetchRequest() as! NSFetchRequest<Project>
         /*
@@ -61,7 +61,7 @@ extension Project {
      The 'static' keyword designates the func as a class method invoked by using the
      class name as Song.filteredSongsFetchRequest() in any .swift file in your project.
      */
-    static func filteredTripsFetchRequest(searchCategory: String, searchQuery: String) -> NSFetchRequest<Project> {
+    static func filteredProjectsFetchRequest(searchCategory: String, searchQuery: String) -> NSFetchRequest<Project> {
         
         let fetchRequest = NSFetchRequest<Project>(entityName: "Project")
         

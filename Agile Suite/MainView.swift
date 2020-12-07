@@ -12,21 +12,33 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
+            TicketsList()
+                .tabItem {
+                    Image(systemName: "ticket")
+                    SwiftUI.Text("Tickets")
+                }
+            ProjectsList()
+                .tabItem {
+                    Image(systemName: "folder")
+                    SwiftUI.Text("Projects")
+                }
             NonWork()
                 .tabItem {
                     Image(systemName: "paperplane")
                     Text("Break")
-                }
-            TicketsList()
-                .tabItem {
-                    Image(systemName: "ticket")
-                    Text("Tickets")
                 }
             Settings()
                 .tabItem {
                     Image(systemName: "gear")
                     SwiftUI.Text("Settings")
                 }
+//            AddProject()
+//                .tabItem {
+//                    Image(systemName: "gear")
+//                    SwiftUI.Text("Test")
+//                }
+
+            
         }   // End of TabView
             .font(.headline)
             .imageScale(.medium)
