@@ -2,42 +2,42 @@
     {
         "title": "Add button to front end",
         "description": "Create a new react component that is a red button",
-        "dueDate": "2019-10-01",
+        "dueDate": "2021-10-01",
         "dateCreated": "2019-10-04",
         "completed": false
     },
     {
         "title": "Refactor voice recognition code",
         "description": "Refactor the Python code in recog.py",
-        "dueDate": "2019-12-04",
+        "dueDate": "2021-12-04",
         "dateCreated": "2019-04-05",
         "completed": false
     },
     {
         "title": "Add test cases to ICloud code",
         "description": "Check that pushing to the cloud works in a reasonable time frame",
-        "dueDate": "2019-07-21",
+        "dueDate": "2021-07-21",
         "dateCreated": "2019-09-15",
         "completed": false
     },
     {
         "title": "Add cost column to database",
         "description": "Add a cost column so that we can keep track of expenses",
-        "dueDate": "2019-04-22",
+        "dueDate": "2021-04-22",
         "dateCreated": "2019-05-16",
         "completed": false
     },
     {
         "title": "Get coffee for boss",
         "description": "You're an intern. Get some coffe for your boss.",
-        "dueDate": "2019-02-01",
+        "dueDate": "2020-02-01",
         "dateCreated": "2019-05-19",
         "completed": false
     },
     {
         "title": "Make the homepage button bigger",
         "description": "Use CSS to make the button bigger with a width 2 x larger",
-        "dueDate": "2019-03-03",
+        "dueDate": "2020-10-09",
         "dateCreated": "2019-08-24",
         "completed": false
     }    

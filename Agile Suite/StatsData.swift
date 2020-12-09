@@ -55,7 +55,7 @@ public func createStatsDatabase() {
     
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy/MM/dd"
-    statsEntity.firstDate = formatter.date(from: "2020/10/09")!
+    statsEntity.firstDate = formatter.date(from: "2020/11/02")!
     
     statsEntity.ticketsCreated = [12, 5, 8, 19, 4]
     statsEntity.ticketsCompleted = [4, 6, 9, 12, 11]

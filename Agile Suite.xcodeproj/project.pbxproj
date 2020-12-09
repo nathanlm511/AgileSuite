@@ -389,8 +389,8 @@
 		B79257EE257830E200E07151 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
-				B79257EF2578317900E07151 /* TicketsList.swift */,
 				B792580E2578379900E07151 /* TicketItem.swift */,
+				B79257EF2578317900E07151 /* TicketsList.swift */,
 				B792581225783A5F00E07151 /* TicketDetails.swift */,
 				B79258152578831900E07151 /* AddTicket.swift */,
 			);
