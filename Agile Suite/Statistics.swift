@@ -21,7 +21,8 @@ import CoreData
 // ❎ CoreData Ticket entity public class
 public class Stats: NSManagedObject, Identifiable {
     
-    @NSManaged public var ticketsCompleted: [NSNumber]
+    @NSManaged public var ticketsCompleted: [Double]
+    @NSManaged public var firstDate: Date
 }
  
 /*

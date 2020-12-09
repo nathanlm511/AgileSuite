@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,8 @@
 		B769679A258076F600CBE4AC /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7696799258076F600CBE4AC /* ProjectDetails.swift */; };
 		B769679D2580770800CBE4AC /* ProjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769679C2580770800CBE4AC /* ProjectItem.swift */; };
 		B76967A02580771700CBE4AC /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769679F2580771700CBE4AC /* ProjectsList.swift */; };
+		B76967A825807CCF00CBE4AC /* ChartApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967A725807CCF00CBE4AC /* ChartApiData.swift */; };
+		B76967AC258086F600CBE4AC /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = B76967AB258086F600CBE4AC /* SwiftUICharts */; };
 		B79257C52566324400E07151 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79257C42566324400E07151 /* CloudKit.framework */; };
 		B79257D42576CF0E00E07151 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D32576CF0E00E07151 /* Break.swift */; };
 		B79257D82576CFD900E07151 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D72576CFD900E07151 /* UserData.swift */; };
@@ -89,6 +91,7 @@
 		B7696799258076F600CBE4AC /* ProjectDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
 		B769679C2580770800CBE4AC /* ProjectItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectItem.swift; sourceTree = "<group>"; };
 		B769679F2580771700CBE4AC /* ProjectsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
+		B76967A725807CCF00CBE4AC /* ChartApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartApiData.swift; sourceTree = "<group>"; };
 		B79257C42566324400E07151 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B79257D32576CF0E00E07151 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		B79257D72576CFD900E07151 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79257C52566324400E07151 /* CloudKit.framework in Frameworks */,
+				B76967AC258086F600CBE4AC /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				B79257EA2576D89700E07151 /* QuoteApiData.swift */,
+				B76967A725807CCF00CBE4AC /* ChartApiData.swift */,
 			);
 			name = "API Data";
 			sourceTree = "<group>";
@@ -335,6 +340,9 @@
 			dependencies = (
 			);
 			name = "Agile Suite";
+			packageProductDependencies = (
+				B76967AB258086F600CBE4AC /* SwiftUICharts */,
+			);
 			productName = "Agile Suite";
 			productReference = B711D76425618ED600F8158B /* Agile Suite.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +371,9 @@
 				Base,
 			);
 			mainGroup = B711D75B25618ED600F8158B;
+			packageReferences = (
+				B76967AA258086F600CBE4AC /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = B711D76525618ED600F8158B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,6 +438,7 @@
 				6951BEDB257E37B400272C2D /* NavigationStyle.swift in Sources */,
 				B79257E12576D14E00E07151 /* NonWork.swift in Sources */,
 				6951BED8257E36A300272C2D /* PhotoImageFromBinaryData.swift in Sources */,
+				B76967A825807CCF00CBE4AC /* ChartApiData.swift in Sources */,
 				B711D7882561952000F8158B /* QuoteStruct.swift in Sources */,
 				B792581325783A5F00E07151 /* TicketDetails.swift in Sources */,
 				6951BEC6257DEC7E00272C2D /* PastProjectsData.swift in Sources */,
@@ -636,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B76967AA258086F600CBE4AC /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B76967AB258086F600CBE4AC /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B76967AA258086F600CBE4AC /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B76967062579688000CBE4AC /* Agile_Suite.xcdatamodeld */ = {
