@@ -19,7 +19,7 @@ import CoreData
  select Manual/None from Codegen menu.
  */
 
-// ❎ CoreData Song entity public class
+// ❎ CoreData Project entity public class
 public class Project: NSManagedObject, Identifiable {
     
     @NSManaged public var name: String?
@@ -79,19 +79,15 @@ extension Project {
         // Case insensitive search [c] for searchQuery under each category
         switch searchCategory {
         case "Project Name":
-            fetchRequest.predicate = NSPredicate(format: "cost CONTAINS[c] %@", searchQuery)
+            fetchRequest.predicate = NSPredicate(format: "name CONTAINS[c] %@", searchQuery)
         case "Company":
-            fetchRequest.predicate = NSPredicate(format: "cost CONTAINS[c] %@", searchQuery)
+            fetchRequest.predicate = NSPredicate(format: "company CONTAINS[c] %@", searchQuery)
         case "Project Technologies":
-            fetchRequest.predicate = NSPredicate(format: "rating CONTAINS[c] %@", searchQuery)
+            fetchRequest.predicate = NSPredicate(format: "technologies CONTAINS[c] %@", searchQuery)
         case "Project Description":
-            fetchRequest.predicate = NSPredicate(format: "title CONTAINS[c] %@", searchQuery)
-        case "Compound":
-            let components = searchQuery.components(separatedBy: "AND")
-            let genreQuery = components[0].trimmingCharacters(in: .whitespacesAndNewlines)
-            let ratingQuery = components[1].trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            fetchRequest.predicate = NSPredicate(format: "startDate CONTAINS[c] %@ AND rating CONTAINS[c] %@", genreQuery, ratingQuery)
+            fetchRequest.predicate = NSPredicate(format: "d_escription CONTAINS[c] %@", searchQuery)
+        case "All":
+            fetchRequest.predicate = NSPredicate(format: "name CONTAINS[c] %@ OR company CONTAINS[c] %@ OR technologies CONTAINS[c] %@ d_escription CONTAINS[c] %@ ", searchQuery, searchQuery, searchQuery, searchQuery)
         default:
             print("Search category is out of range")
         }

@@ -31,14 +31,7 @@ struct MainView: View {
                 .tabItem {
                     Image(systemName: "gear")
                     SwiftUI.Text("Settings")
-                }
-//            AddProject()
-//                .tabItem {
-//                    Image(systemName: "gear")
-//                    SwiftUI.Text("Test")
-//                }
-
-            
+                }            
         }   // End of TabView
             .font(.headline)
             .imageScale(.medium)

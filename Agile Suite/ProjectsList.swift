@@ -40,10 +40,10 @@ struct ProjectsList: View {
                .navigationBarTitle(Text("Projects"), displayMode: .inline)
               
                // Place the Edit button on left and Add (+) button on right of the navigation bar
-//               .navigationBarItems(leading: EditButton(), trailing:
-//                   NavigationLink(destination: AddParkVisit()) {
-//                       Image(systemName: "plus")
-//               })
+               .navigationBarItems(leading: EditButton(), trailing:
+                   NavigationLink(destination: AddProject()) {
+                       Image(systemName: "plus")
+               })
           
        }   // End of NavigationView
            .customNavigationViewStyle()  // Given in NavigationStyle.swift
