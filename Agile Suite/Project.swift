@@ -80,7 +80,7 @@ extension Project {
         switch searchCategory {
         case "Project Name":
             fetchRequest.predicate = NSPredicate(format: "name CONTAINS[c] %@", searchQuery)
-        case "Company":
+        case "Company Name":
             fetchRequest.predicate = NSPredicate(format: "company CONTAINS[c] %@", searchQuery)
         case "Project Technologies":
             fetchRequest.predicate = NSPredicate(format: "technologies CONTAINS[c] %@", searchQuery)

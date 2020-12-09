@@ -23,7 +23,6 @@ struct ProjectsList: View {
    @EnvironmentObject var userData: UserData
   
    var body: some View {
-       NavigationView {
            List {
                /*
                 Each NSManagedObject has internally assigned unique ObjectIdentifier
@@ -45,7 +44,6 @@ struct ProjectsList: View {
                        Image(systemName: "plus")
                })
           
-       }   // End of NavigationView
            .customNavigationViewStyle()  // Given in NavigationStyle.swift
    }
   

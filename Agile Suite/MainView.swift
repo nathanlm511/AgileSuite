@@ -17,7 +17,7 @@ struct MainView: View {
                     Image(systemName: "ticket")
                     SwiftUI.Text("Tickets")
                 }
-            ProjectsList()
+            MainProjectView()
                 .tabItem {
                     Image(systemName: "folder")
                     SwiftUI.Text("Projects")
@@ -36,7 +36,8 @@ struct MainView: View {
                 .tabItem {
                     Image(systemName: "gear")
                     SwiftUI.Text("Settings")
-                }            
+                }
+
         }   // End of TabView
             .font(.headline)
             .imageScale(.medium)
