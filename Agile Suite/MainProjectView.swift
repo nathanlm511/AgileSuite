@@ -19,34 +19,24 @@ struct MainProjectView: View {
         
         NavigationView {
             VStack {
-                Form{
-                    Section(header: Text("")) {
-                        NavigationLink(destination: SearchDatabase())
-                        {
-                            HStack {
-                                Image("SearchDatabase")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 100)
-                                
-                                Text("Search Project Database")
-                            } // End of HStack
-                        } // End of NavigationLink
-                    }
-                    Section(header: Text("")) {
-                        NavigationLink(destination: ProjectsList())
-                        {
-                            HStack {
-                                Image(systemName: "book.circle")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 100)
-                                Text("View Project Database")
-                            } // End of HStack
-                        } // End of NavigationLink
-                    }
+               // Segmented Picker: Part 3 of 3
+               Picker("", selection: $index) {
+                   ForEach(0 ..< tabChoices.count, id: \.self) {
+                       Text(self.tabChoices[$0])
+                   }
+               }
+               .pickerStyle(SegmentedPickerStyle())
+               .padding()
+              
+                if (index == 0) {
+                    ProjectsList()
                 }
-            }
+                else if (index == 1) {
+                    SearchDatabase()
+                }
+                
+                Spacer()
+           }
 
             .navigationBarTitle(Text("Projects"), displayMode: .inline)
             

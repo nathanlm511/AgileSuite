@@ -33,7 +33,7 @@ struct ProjectsList: View {
                        ProjectItem(project: aProject)
                    }
                }
-               //.onDelete(perform: delete)
+               .onDelete(perform: delete)
               
            }   // End of List
                .navigationBarTitle(Text("Projects"), displayMode: .inline)
@@ -52,26 +52,26 @@ struct ProjectsList: View {
     MARK: - Delete Selected Park Visit
     ----------------------------------
     */
-//   func delete(at offsets: IndexSet) {
-//       /*
-//       'offsets.first' is an unsafe pointer to the index number of the array element
-//       to be deleted. It is nil if the array is empty. Process it as an optional.
-//       */
-//       if let index = offsets.first {
-//
-//           let parkVisitEntityToDelete = self.allParkVisits[index]
-//
-//           // ❎ CoreData Delete operation
-//           self.managedObjectContext.delete(parkVisitEntityToDelete)
-//
-//           // ❎ CoreData Save operation
-//           do {
-//               try self.managedObjectContext.save()
-//           } catch {
-//               print("Unable to delete!")
-//           }
-//       }
-//   }
+   func delete(at offsets: IndexSet) {
+       /*
+       'offsets.first' is an unsafe pointer to the index number of the array element
+       to be deleted. It is nil if the array is empty. Process it as an optional.
+       */
+       if let index = offsets.first {
+
+           let projectEntityToDelete = self.allPastProjects[index]
+
+           // ❎ CoreData Delete operation
+           self.managedObjectContext.delete(projectEntityToDelete)
+
+           // ❎ CoreData Save operation
+           do {
+               try self.managedObjectContext.save()
+           } catch {
+               print("Unable to delete!")
+           }
+       }
+   }
   
 }
 
