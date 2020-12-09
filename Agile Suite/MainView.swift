@@ -12,6 +12,16 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
+            TicketsList()
+                .tabItem {
+                    Image(systemName: "ticket")
+                    SwiftUI.Text("Tickets")
+                }
+            ProjectsList()
+                .tabItem {
+                    Image(systemName: "folder")
+                    SwiftUI.Text("Projects")
+                }
             NonWork()
                 .tabItem {
                     Image(systemName: "paperplane")
@@ -31,7 +41,7 @@ struct MainView: View {
                 .tabItem {
                     Image(systemName: "gear")
                     SwiftUI.Text("Settings")
-                }
+                }            
         }   // End of TabView
             .font(.headline)
             .imageScale(.medium)

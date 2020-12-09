@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import LocalAuthentication
 
 struct LoginView : View {
     
@@ -16,7 +17,7 @@ struct LoginView : View {
     
     @State private var enteredPassword = ""
     @State private var showInvalidPasswordAlert = false
-    
+    @State private var isUnlocked = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -56,7 +57,7 @@ struct LoginView : View {
                                  In this case, allow the user to login.
                                  */
                                 
-                                if validPassword == nil || self.enteredPassword == validPassword {
+                                if validPassword == nil || self.enteredPassword == validPassword || self.isUnlocked {
                                     userData.userAuthenticated = true
                                     self.showInvalidPasswordAlert = false
                                 } else {
@@ -96,6 +97,7 @@ struct LoginView : View {
                             
                             
                         } // End of HStack
+                        .onAppear(perform: authenticate)
                     }   // End of VStack
                 }   // End of ScrollView
             }   // End of ZStack
@@ -115,6 +117,33 @@ struct LoginView : View {
         
         // Tapping OK resets @State var showInvalidPasswordAlert to false.
     }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // it's possible, so go ahead and use it
+            let reason = "We need to unlock your data."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                // authentication has now completed
+                DispatchQueue.main.async {
+                    if success {
+                        self.isUnlocked = true
+                    } else {
+                        // there was a problem
+                        self.isUnlocked = false
+                    }
+                }
+            }
+        } else {
+            // no biometrics
+        }
+}
+
+
 }
 
 struct LoginView_Previews: PreviewProvider {

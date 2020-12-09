@@ -2,6 +2,18 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17510.1" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Stats" representedClassName=".Stats" syncable="YES">
         <attribute name="ticketsCompleted" optional="YES" attributeType="Transformable"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17510.1" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Photo" representedClassName=".Photo" syncable="YES">
+        <attribute name="projectPhoto" optional="YES" attributeType="Binary"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="photo" inverseEntity="Project"/>
+    </entity>
+    <entity name="Project" representedClassName=".Project" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="d_escription" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="technologies" optional="YES" attributeType="String"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="project" inverseEntity="Photo"/>
     </entity>
     <entity name="Ticket" representedClassName=".Ticket" syncable="YES">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -13,5 +25,7 @@
     <elements>
         <element name="Ticket" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="Stats" positionX="-54" positionY="27" width="128" height="58"/>
+        <element name="Project" positionX="-36" positionY="45" width="128" height="133"/>
+        <element name="Photo" positionX="-9" positionY="54" width="128" height="73"/>
     </elements>
 </model>

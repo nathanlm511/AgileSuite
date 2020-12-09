@@ -11,20 +11,19 @@ import Foundation
 import SwiftUI
 import CoreData
 
-// Array of Travel structs for use only in this file
-//fileprivate var travelStructList = [Travel]()
-var projectStructList = [PastProject]()
+// Global Array of PastProject structs for use only in this file
+fileprivate var projectStructList = [PastProjectStruct]()
 
 /*
  ***********************************
  MARK: - Create Music Album Database
  ***********************************
  */
-public func createTravelDatabase() {
+public func createProjectsDatabase() {
     
     projectStructList = decodeJsonFileIntoArrayOfStructs(fullFilename: "PastProjectsData.json", fileLocation: "Main Bundle")
     
-    populateDatabase()
+    populateProjectDatabase()
 }
 
 /*
@@ -32,7 +31,7 @@ public func createTravelDatabase() {
  MARK: - Populate Database If Not Already Done
  *********************************************
  */
-func populateDatabase() {
+func populateProjectDatabase() {
     
     // ❎ Get object reference of CoreData managedObjectContext from the persistent container
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -95,7 +94,7 @@ func populateDatabase() {
         let photoEntity = Photo(context: managedObjectContext)
         
         // Obtain the album cover photo image from Assets.xcassets as UIImage
-        let photoUIImage = UIImage(named: project.projectPhoto)
+        let photoUIImage = UIImage(named: project.photo)
         
         // Convert photoUIImage to data of type Data (Binary Data) in JPEG format with 100% quality
         let photoData = photoUIImage?.jpegData(compressionQuality: 1.0)
@@ -111,16 +110,16 @@ func populateDatabase() {
        
 //        // ❎ Create an instance of the Audio Entity in CoreData managedObjectContext
 //        let audioEntity = Audio(context: managedObjectContext)
-//       
+//
 //        // ❎ Dress it up by specifying its attribute
-//       
+//
 //        // Obtain the URL of the national park visit audio filename from main bundle
 //        let audioFileUrl = Bundle.main.url(forResource: project.voiceRecording, withExtension: "wav", subdirectory: "AudioFiles")
-//       
+//
 //        do {
 //            // Try to get the audio file data from audioFileUrl
 //            audioEntity.voiceRecording = try Data(contentsOf: audioFileUrl!, options: NSData.ReadingOptions.mappedIfSafe)
-//           
+//
 //        } catch {
 //            fatalError("Project Audio is not found in the main bundle!")
 //        }
@@ -155,3 +154,4 @@ func populateDatabase() {
     }   // End of for loop
     
 }
+

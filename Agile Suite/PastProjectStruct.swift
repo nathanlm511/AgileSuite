@@ -9,13 +9,13 @@
 import Foundation
 
 
-struct PastProject: Decodable {
+struct PastProjectStruct: Hashable, Codable {
     
     var name: String
     var dateCreated: String
     var d_escription: String
     var technologies: String
     var company: String
-    var projectPhoto: String
+    var photo: String
     
 }

@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         createTicketsDatabase()     // Given in TripsData.swift
         createStatsDatabase()
+        createProjectsDatabase()
        
         return true
     }
