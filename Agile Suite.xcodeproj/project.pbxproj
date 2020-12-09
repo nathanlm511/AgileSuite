@@ -46,6 +46,12 @@
 		B76967C325809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */; };
 		B76967C425809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */; };
 		B76967C725809D0000CBE4AC /* Agile Suite WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B76967B725809CFE00CBE4AC /* Agile Suite WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B76967D925816A8C00CBE4AC /* ResultDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967D825816A8C00CBE4AC /* ResultDetails.swift */; };
+		B76967DD25816A9400CBE4AC /* SearchResultsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967DC25816A9400CBE4AC /* SearchResultsEmpty.swift */; };
+		B76967E125816A9E00CBE4AC /* ResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967E025816A9E00CBE4AC /* ResultsList.swift */; };
+		B76967E525816AA700CBE4AC /* SearchDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967E425816AA700CBE4AC /* SearchDatabase.swift */; };
+		B76967E925816AAF00CBE4AC /* ResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967E825816AAF00CBE4AC /* ResultItem.swift */; };
+		B76967ED25816ABB00CBE4AC /* MainProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967EC25816ABB00CBE4AC /* MainProjectView.swift */; };
 		B79257C52566324400E07151 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79257C42566324400E07151 /* CloudKit.framework */; };
 		B79257D42576CF0E00E07151 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D32576CF0E00E07151 /* Break.swift */; };
 		B79257D82576CFD900E07151 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D72576CFD900E07151 /* UserData.swift */; };
@@ -130,6 +136,12 @@
 		B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Agile_Suite_Widget.intentdefinition; sourceTree = "<group>"; };
 		B76967C025809D0000CBE4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76967C225809D0000CBE4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76967D825816A8C00CBE4AC /* ResultDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDetails.swift; sourceTree = "<group>"; };
+		B76967DC25816A9400CBE4AC /* SearchResultsEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsEmpty.swift; sourceTree = "<group>"; };
+		B76967E025816A9E00CBE4AC /* ResultsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsList.swift; sourceTree = "<group>"; };
+		B76967E425816AA700CBE4AC /* SearchDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDatabase.swift; sourceTree = "<group>"; };
+		B76967E825816AAF00CBE4AC /* ResultItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultItem.swift; sourceTree = "<group>"; };
+		B76967EC25816ABB00CBE4AC /* MainProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainProjectView.swift; sourceTree = "<group>"; };
 		B79257C42566324400E07151 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B79257D32576CF0E00E07151 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		B79257D72576CFD900E07151 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -319,6 +331,12 @@
 		B76967952580768E00CBE4AC /* Past Projects */ = {
 			isa = PBXGroup;
 			children = (
+				B76967EC25816ABB00CBE4AC /* MainProjectView.swift */,
+				B76967E825816AAF00CBE4AC /* ResultItem.swift */,
+				B76967E425816AA700CBE4AC /* SearchDatabase.swift */,
+				B76967E025816A9E00CBE4AC /* ResultsList.swift */,
+				B76967DC25816A9400CBE4AC /* SearchResultsEmpty.swift */,
+				B76967D825816A8C00CBE4AC /* ResultDetails.swift */,
 				B769679F2580771700CBE4AC /* ProjectsList.swift */,
 				B769679C2580770800CBE4AC /* ProjectItem.swift */,
 				B7696799258076F600CBE4AC /* ProjectDetails.swift */,
@@ -504,7 +522,9 @@
 				B79257D42576CF0E00E07151 /* Break.swift in Sources */,
 				6951BE9125794AEA00272C2D /* Audio.swift in Sources */,
 				B79257E42576D24700E07151 /* Quotes.swift in Sources */,
+				B76967ED25816ABB00CBE4AC /* MainProjectView.swift in Sources */,
 				6951BE802578BED100272C2D /* PasswordReset.swift in Sources */,
+				B76967E525816AA700CBE4AC /* SearchDatabase.swift in Sources */,
 				B76967082579688000CBE4AC /* Agile_Suite.xcdatamodeld in Sources */,
 				B79257D82576CFD900E07151 /* UserData.swift in Sources */,
 				B769671B257C5DCB00CBE4AC /* Graphs.swift in Sources */,
@@ -514,12 +534,14 @@
 				B76967C425809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */,
 				B79257FE257833D300E07151 /* TicketStruct.swift in Sources */,
 				B769679A258076F600CBE4AC /* ProjectDetails.swift in Sources */,
+				B76967E925816AAF00CBE4AC /* ResultItem.swift in Sources */,
 				B711D76C25618ED600F8158B /* ContentView.swift in Sources */,
 				B792580F2578379900E07151 /* TicketItem.swift in Sources */,
 				B792581D2579641700E07151 /* UtilityFunctions.swift in Sources */,
 				B79257E72576D24E00E07151 /* Game.swift in Sources */,
 				6951BE792578BD5A00272C2D /* LoginView.swift in Sources */,
 				6951BEE4257E4FB700272C2D /* ImagePicker.swift in Sources */,
+				B76967E125816A9E00CBE4AC /* ResultsList.swift in Sources */,
 				B769679D2580770800CBE4AC /* ProjectItem.swift in Sources */,
 				6951BE7D2578BEC600272C2D /* Settings.swift in Sources */,
 				6951BE8E25794A8D00272C2D /* Photo.swift in Sources */,
@@ -528,8 +550,10 @@
 				B79257FB2578338A00E07151 /* TicketData.swift in Sources */,
 				B79257DB2576D07500E07151 /* TimerData.swift in Sources */,
 				B79257F02578317900E07151 /* TicketsList.swift in Sources */,
+				B76967D925816A8C00CBE4AC /* ResultDetails.swift in Sources */,
 				B7696714257C3E5B00CBE4AC /* Statistics.swift in Sources */,
 				6951BEDB257E37B400272C2D /* NavigationStyle.swift in Sources */,
+				B76967DD25816A9400CBE4AC /* SearchResultsEmpty.swift in Sources */,
 				B79257E12576D14E00E07151 /* NonWork.swift in Sources */,
 				6951BED8257E36A300272C2D /* PhotoImageFromBinaryData.swift in Sources */,
 				B76967A825807CCF00CBE4AC /* ChartApiData.swift in Sources */,

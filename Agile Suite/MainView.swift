@@ -17,6 +17,11 @@ struct MainView: View {
                     Image(systemName: "ticket")
                     SwiftUI.Text("Tickets")
                 }
+            MainProjectView()
+                .tabItem {
+                    Image(systemName: "folder")
+                    SwiftUI.Text("Projects")
+                }
             NonWork()
                 .tabItem {
                     Image(systemName: "paperplane")
