@@ -15,6 +15,7 @@
     <entity name="Stats" representedClassName=".Stats" syncable="YES">
         <attribute name="firstDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="ticketsCompleted" optional="YES" attributeType="Transformable"/>
+        <attribute name="ticketsCreated" optional="YES" attributeType="Transformable"/>
     </entity>
     <entity name="Ticket" representedClassName=".Ticket" syncable="YES">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -24,9 +25,9 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Stats" positionX="-54" positionY="27" width="128" height="73"/>
         <element name="Photo" positionX="-9" positionY="54" width="128" height="73"/>
         <element name="Project" positionX="-36" positionY="45" width="128" height="133"/>
+        <element name="Stats" positionX="-54" positionY="27" width="128" height="88"/>
         <element name="Ticket" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

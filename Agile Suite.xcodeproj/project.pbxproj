@@ -39,6 +39,13 @@
 		B76967A02580771700CBE4AC /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769679F2580771700CBE4AC /* ProjectsList.swift */; };
 		B76967A825807CCF00CBE4AC /* ChartApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967A725807CCF00CBE4AC /* ChartApiData.swift */; };
 		B76967AC258086F600CBE4AC /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = B76967AB258086F600CBE4AC /* SwiftUICharts */; };
+		B76967B925809CFE00CBE4AC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76967B825809CFE00CBE4AC /* WidgetKit.framework */; };
+		B76967BB25809CFE00CBE4AC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76967BA25809CFE00CBE4AC /* SwiftUI.framework */; };
+		B76967BE25809CFE00CBE4AC /* Agile_Suite_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76967BD25809CFE00CBE4AC /* Agile_Suite_Widget.swift */; };
+		B76967C125809D0000CBE4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76967C025809D0000CBE4AC /* Assets.xcassets */; };
+		B76967C325809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */; };
+		B76967C425809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */; };
+		B76967C725809D0000CBE4AC /* Agile Suite WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B76967B725809CFE00CBE4AC /* Agile Suite WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B79257C52566324400E07151 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79257C42566324400E07151 /* CloudKit.framework */; };
 		B79257D42576CF0E00E07151 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D32576CF0E00E07151 /* Break.swift */; };
 		B79257D82576CFD900E07151 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79257D72576CFD900E07151 /* UserData.swift */; };
@@ -57,6 +64,30 @@
 		B79258162578831900E07151 /* AddTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79258152578831900E07151 /* AddTicket.swift */; };
 		B792581D2579641700E07151 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792581C2579641700E07151 /* UtilityFunctions.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B76967C525809D0000CBE4AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B711D75C25618ED600F8158B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B76967B625809CFE00CBE4AC;
+			remoteInfo = "Agile Suite WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B76967C825809D0000CBE4AC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B76967C725809D0000CBE4AC /* Agile Suite WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6951BE752578BC0600272C2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -92,6 +123,13 @@
 		B769679C2580770800CBE4AC /* ProjectItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectItem.swift; sourceTree = "<group>"; };
 		B769679F2580771700CBE4AC /* ProjectsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
 		B76967A725807CCF00CBE4AC /* ChartApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartApiData.swift; sourceTree = "<group>"; };
+		B76967B725809CFE00CBE4AC /* Agile Suite WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Agile Suite WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76967B825809CFE00CBE4AC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B76967BA25809CFE00CBE4AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B76967BD25809CFE00CBE4AC /* Agile_Suite_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agile_Suite_Widget.swift; sourceTree = "<group>"; };
+		B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Agile_Suite_Widget.intentdefinition; sourceTree = "<group>"; };
+		B76967C025809D0000CBE4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B76967C225809D0000CBE4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B79257C42566324400E07151 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B79257D32576CF0E00E07151 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		B79257D72576CFD900E07151 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -118,6 +156,15 @@
 			files = (
 				B79257C52566324400E07151 /* CloudKit.framework in Frameworks */,
 				B76967AC258086F600CBE4AC /* SwiftUICharts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76967B425809CFE00CBE4AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76967BB25809CFE00CBE4AC /* SwiftUI.framework in Frameworks */,
+				B76967B925809CFE00CBE4AC /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				B711D76625618ED600F8158B /* Agile Suite */,
+				B76967BC25809CFE00CBE4AC /* Agile Suite Widget */,
 				B711D76525618ED600F8158B /* Products */,
 				B79257C32566324400E07151 /* Frameworks */,
 				B7925818257961F100E07151 /* Recovered References */,
@@ -166,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				B711D76425618ED600F8158B /* Agile Suite.app */,
+				B76967B725809CFE00CBE4AC /* Agile Suite WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,10 +327,23 @@
 			name = "Past Projects";
 			sourceTree = "<group>";
 		};
+		B76967BC25809CFE00CBE4AC /* Agile Suite Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B76967BD25809CFE00CBE4AC /* Agile_Suite_Widget.swift */,
+				B76967BF25809CFE00CBE4AC /* Agile_Suite_Widget.intentdefinition */,
+				B76967C025809D0000CBE4AC /* Assets.xcassets */,
+				B76967C225809D0000CBE4AC /* Info.plist */,
+			);
+			path = "Agile Suite Widget";
+			sourceTree = "<group>";
+		};
 		B79257C32566324400E07151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				B79257C42566324400E07151 /* CloudKit.framework */,
+				B76967B825809CFE00CBE4AC /* WidgetKit.framework */,
+				B76967BA25809CFE00CBE4AC /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -334,10 +396,12 @@
 				B711D76025618ED600F8158B /* Sources */,
 				B711D76125618ED600F8158B /* Frameworks */,
 				B711D76225618ED600F8158B /* Resources */,
+				B76967C825809D0000CBE4AC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B76967C625809D0000CBE4AC /* PBXTargetDependency */,
 			);
 			name = "Agile Suite";
 			packageProductDependencies = (
@@ -346,6 +410,23 @@
 			productName = "Agile Suite";
 			productReference = B711D76425618ED600F8158B /* Agile Suite.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B76967B625809CFE00CBE4AC /* Agile Suite WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B76967CB25809D0000CBE4AC /* Build configuration list for PBXNativeTarget "Agile Suite WidgetExtension" */;
+			buildPhases = (
+				B76967B325809CFE00CBE4AC /* Sources */,
+				B76967B425809CFE00CBE4AC /* Frameworks */,
+				B76967B525809CFE00CBE4AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Agile Suite WidgetExtension";
+			productName = "Agile Suite WidgetExtension";
+			productReference = B76967B725809CFE00CBE4AC /* Agile Suite WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -358,6 +439,9 @@
 				ORGANIZATIONNAME = "Nathan Moeliono, Tommy Phan, Mariam Naseem";
 				TargetAttributes = {
 					B711D76325618ED600F8158B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					B76967B625809CFE00CBE4AC = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -379,6 +463,7 @@
 			projectRoot = "";
 			targets = (
 				B711D76325618ED600F8158B /* Agile Suite */,
+				B76967B625809CFE00CBE4AC /* Agile Suite WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -394,6 +479,14 @@
 				B711D77125618ED700F8158B /* Assets.xcassets in Resources */,
 				B79257DE2576D0B700E07151 /* Sound Files in Resources */,
 				6951BEC3257DE9BD00272C2D /* TicketData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76967B525809CFE00CBE4AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76967C125809D0000CBE4AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +511,7 @@
 				6951BEE0257E4FAD00272C2D /* PhotoCaptureView.swift in Sources */,
 				B711D76A25618ED600F8158B /* SceneDelegate.swift in Sources */,
 				B79257F4257832D900E07151 /* Ticket.swift in Sources */,
+				B76967C425809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */,
 				B79257FE257833D300E07151 /* TicketStruct.swift in Sources */,
 				B769679A258076F600CBE4AC /* ProjectDetails.swift in Sources */,
 				B711D76C25618ED600F8158B /* ContentView.swift in Sources */,
@@ -448,7 +542,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B76967B325809CFE00CBE4AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76967C325809D0000CBE4AC /* Agile_Suite_Widget.intentdefinition in Sources */,
+				B76967BE25809CFE00CBE4AC /* Agile_Suite_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B76967C625809D0000CBE4AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B76967B625809CFE00CBE4AC /* Agile Suite WidgetExtension */;
+			targetProxy = B76967C525809D0000CBE4AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B711D77525618ED700F8158B /* LaunchScreen.storyboard */ = {
@@ -581,11 +692,12 @@
 		B711D77C25618ED700F8158B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Agile Suite/Agile Suite.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Agile Suite/Preview Content\"";
 				DEVELOPMENT_TEAM = 9P3KC5LPCS;
 				ENABLE_PREVIEWS = YES;
@@ -596,7 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanmoeliono.Agile-Suite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "CS3714 Provisioning Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -605,11 +717,12 @@
 		B711D77D25618ED700F8158B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Agile Suite/Agile Suite.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Agile Suite/Preview Content\"";
 				DEVELOPMENT_TEAM = 9P3KC5LPCS;
 				ENABLE_PREVIEWS = YES;
@@ -620,7 +733,51 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanmoeliono.Agile-Suite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "CS3714 Provisioning Profile";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B76967C925809D0000CBE4AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P3KC5LPCS;
+				INFOPLIST_FILE = "Agile Suite Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanmoeliono.Agile-Suite.Agile-Suite-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B76967CA25809D0000CBE4AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P3KC5LPCS;
+				INFOPLIST_FILE = "Agile Suite Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanmoeliono.Agile-Suite.Agile-Suite-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -643,6 +800,15 @@
 			buildConfigurations = (
 				B711D77C25618ED700F8158B /* Debug */,
 				B711D77D25618ED700F8158B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B76967CB25809D0000CBE4AC /* Build configuration list for PBXNativeTarget "Agile Suite WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B76967C925809D0000CBE4AC /* Debug */,
+				B76967CA25809D0000CBE4AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

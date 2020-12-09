@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
  
 struct TicketDetails: View {
     
@@ -74,9 +75,11 @@ struct TicketDetails: View {
         var currentCompleted = ticket.completed!
         if (currentCompleted == 0) {
             currentCompleted = 1
+            toggleCompleted(increment: true)
         }
         else {
             currentCompleted = 0
+            toggleCompleted(increment: false)
         }
         ticket.setValue(currentCompleted, forKey: "completed")
         do {
@@ -87,4 +90,40 @@ struct TicketDetails: View {
             print("Unable to edit ticket completion")
         }
     }
+    
+    func toggleCompleted(increment: Bool) {
+        
+        // save to statistics
+        let fetchRequestPublisher = NSFetchRequest<Stats>(entityName: "Stats")
+        var arr = [Stats]()
+        var statsFound = Stats()
+        do {
+            //-----------------------------
+            // ❎ Execute the Fetch Request
+            //-----------------------------
+            arr = try managedObjectContext.fetch(fetchRequestPublisher)
+            statsFound = arr[0]
+            let firstWeek = statsFound.firstDate
+            let components = Calendar.current.dateComponents([.weekOfYear], from: firstWeek, to: Date())
+            let weekDiff = components.weekOfYear
+            let length = statsFound.ticketsCompleted.count
+            var index = length
+            while index <= (weekDiff ?? 0) {
+                statsFound.ticketsCompleted.append(0)
+                index = index + 1
+                
+            }
+            if (increment) {
+                statsFound.ticketsCompleted[weekDiff ?? 0] = statsFound.ticketsCompleted[weekDiff ?? 0] + 1
+            }
+            else {
+                statsFound.ticketsCompleted[weekDiff ?? 0] = statsFound.ticketsCompleted[weekDiff ?? 0] - 1
+            }
+            
+            
+        } catch {
+            print("Stats entity fetch failed!")
+        }
+           
+    }   // End of function
 }

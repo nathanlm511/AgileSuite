@@ -16,7 +16,9 @@ struct Graphs: View {
     
     var body: some View {
         VStack {
-            LineView(data: allStats[0].ticketsCompleted, title: "Tickets completed per Week")
+            Text("First week starts at date: \(allStats[0].firstDate)")
+            LineView(data: allStats[0].ticketsCreated, title: "Weekly Tickets Created ")
+            LineView(data: allStats[0].ticketsCompleted, title: "Weekly Tickets Completed")
         }
         
     }

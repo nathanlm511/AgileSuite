@@ -204,22 +204,22 @@ struct AddTicket: View {
             arr = try managedObjectContext.fetch(fetchRequestPublisher)
             statsFound = arr[0]
             // if not tickets are set yet, add current date
-            if (statsFound.ticketsCompleted.count == 0) {
-                statsFound.ticketsCompleted.append(1)
+            if (statsFound.ticketsCreated.count == 0) {
+                statsFound.ticketsCreated.append(1)
                 statsFound.firstDate = Date().startOfWeek()
             }
             else {
                 let firstWeek = statsFound.firstDate
                 let components = Calendar.current.dateComponents([.weekOfYear], from: firstWeek, to: Date())
                 let weekDiff = components.weekOfYear
-                let length = statsFound.ticketsCompleted.count
+                let length = statsFound.ticketsCreated.count
                 var index = length
                 while index <= (weekDiff ?? 0) {
-                    statsFound.ticketsCompleted.append(0)
+                    statsFound.ticketsCreated.append(0)
                     index = index + 1
                     
                 }
-                statsFound.ticketsCompleted[weekDiff ?? 0] = statsFound.ticketsCompleted[weekDiff ?? 0] + 1
+                statsFound.ticketsCreated[weekDiff ?? 0] = statsFound.ticketsCreated[weekDiff ?? 0] + 1
             }
             
         } catch {

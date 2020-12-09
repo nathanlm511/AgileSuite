@@ -21,6 +21,7 @@ import CoreData
 // ❎ CoreData Ticket entity public class
 public class Stats: NSManagedObject, Identifiable {
     
+    @NSManaged public var ticketsCreated: [Double]
     @NSManaged public var ticketsCompleted: [Double]
     @NSManaged public var firstDate: Date
 }
@@ -37,7 +38,7 @@ extension Stats {
        
         let request: NSFetchRequest<Stats> = Stats.fetchRequest() as! NSFetchRequest<Stats>
         request.sortDescriptors = [
-            NSSortDescriptor(key: "ticketsCompleted", ascending: true)
+            NSSortDescriptor(key: "ticketsCreated", ascending: true)
         ]
         return request
     }
