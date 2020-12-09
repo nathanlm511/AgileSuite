@@ -25,6 +25,7 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
+        <element name="Stats" positionX="-54" positionY="27" width="128" height="73"/>
         <element name="Photo" positionX="-9" positionY="54" width="128" height="73"/>
         <element name="Project" positionX="-36" positionY="45" width="128" height="133"/>
         <element name="Stats" positionX="-54" positionY="27" width="128" height="88"/>
