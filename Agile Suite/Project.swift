@@ -87,7 +87,7 @@ extension Project {
         case "Project Description":
             fetchRequest.predicate = NSPredicate(format: "d_escription CONTAINS[c] %@", searchQuery)
         case "All":
-            fetchRequest.predicate = NSPredicate(format: "name CONTAINS[c] %@ OR company CONTAINS[c] %@ OR technologies CONTAINS[c] %@ d_escription CONTAINS[c] %@ ", searchQuery, searchQuery, searchQuery, searchQuery)
+            fetchRequest.predicate = NSPredicate(format: "name CONTAINS[c] %@ OR company CONTAINS[c] %@ OR technologies CONTAINS[c] %@ OR d_escription CONTAINS[c] %@ ", searchQuery, searchQuery, searchQuery, searchQuery)
         default:
             print("Search category is out of range")
         }
