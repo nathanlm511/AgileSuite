@@ -27,11 +27,6 @@ struct MainView: View {
                     Image(systemName: "paperplane")
                     Text("Break")
                 }
-            TicketsList()
-                .tabItem {
-                    Image(systemName: "ticket")
-                    Text("Tickets")
-                }
             Graphs()
                 .tabItem {
                     Image(systemName: "chart.pie")
