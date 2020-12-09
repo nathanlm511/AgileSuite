@@ -203,9 +203,24 @@ struct AddTicket: View {
             //-----------------------------
             arr = try managedObjectContext.fetch(fetchRequestPublisher)
             statsFound = arr[0]
-            
-            statsFound.ticketsCompleted.append(3)
-            try self.managedObjectContext.save()
+            // if not tickets are set yet, add current date
+            if (statsFound.ticketsCompleted.count == 0) {
+                statsFound.ticketsCompleted.append(1)
+                statsFound.firstDate = Date().startOfWeek()
+            }
+            else {
+                let firstWeek = statsFound.firstDate
+                let components = Calendar.current.dateComponents([.weekOfYear], from: firstWeek, to: Date())
+                let weekDiff = components.weekOfYear
+                let length = statsFound.ticketsCompleted.count
+                var index = length
+                while index <= (weekDiff ?? 0) {
+                    statsFound.ticketsCompleted.append(0)
+                    index = index + 1
+                    
+                }
+                statsFound.ticketsCompleted[weekDiff ?? 0] = statsFound.ticketsCompleted[weekDiff ?? 0] + 1
+            }
             
         } catch {
             print("Stats entity fetch failed!")
@@ -218,5 +233,15 @@ struct AddTicket: View {
 struct AddTicket_Previews: PreviewProvider {
     static var previews: some View {
         AddTicket()
+    }
+}
+
+extension Calendar {
+    static let gregorian = Calendar(identifier: .gregorian)
+}
+
+extension Date {
+    func startOfWeek(using calendar: Calendar = .gregorian) -> Date {
+        calendar.dateComponents([.calendar, .yearForWeekOfYear, .weekOfYear], from: self).date!
     }
 }

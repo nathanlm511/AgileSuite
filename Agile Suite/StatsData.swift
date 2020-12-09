@@ -52,9 +52,12 @@ public func createStatsDatabase() {
      */
     // ❎ Create an instance of the Stats Entity in CoreData managedObjectContext
     let statsEntity = Stats(context: managedObjectContext)
-   
-    // ❎ Dress it up by specifying its attributes
-    statsEntity.ticketsCompleted = []
+    
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd"
+    statsEntity.firstDate = formatter.date(from: "2020/10/09")!
+    
+    statsEntity.ticketsCompleted = [12, 5, 8, 19, 4]
     
     /*
      ===================================================

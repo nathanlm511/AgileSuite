@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct Graphs: View {
     
@@ -15,9 +16,8 @@ struct Graphs: View {
     
     var body: some View {
         VStack {
-            ForEach(allStats[0].ticketsCompleted, id: \.self) { aTicketCompleted in
-                Text("\(aTicketCompleted)")
-            }
+            LineView(data: allStats[0].ticketsCompleted, title: "Tickets completed per Week")
         }
+        
     }
 }
