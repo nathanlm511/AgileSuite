@@ -209,16 +209,21 @@ struct AddTicket: View {
                 statsFound.firstDate = Date().startOfWeek()
             }
             else {
+                // get firstDate
                 let firstWeek = statsFound.firstDate
+                // compute the difference in weeks
                 let components = Calendar.current.dateComponents([.weekOfYear], from: firstWeek, to: Date())
                 let weekDiff = components.weekOfYear
                 let length = statsFound.ticketsCreated.count
+                // while the array does not have enough entries to support
+                // the new date, add empty week values to the array
                 var index = length
                 while index <= (weekDiff ?? 0) {
                     statsFound.ticketsCreated.append(0)
                     index = index + 1
                     
                 }
+                // increment the week's ticket created value
                 statsFound.ticketsCreated[weekDiff ?? 0] = statsFound.ticketsCreated[weekDiff ?? 0] + 1
             }
             

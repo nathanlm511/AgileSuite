@@ -103,19 +103,25 @@ struct TicketDetails: View {
             //-----------------------------
             arr = try managedObjectContext.fetch(fetchRequestPublisher)
             statsFound = arr[0]
+            // get first date
             let firstWeek = statsFound.firstDate
+            // compute difference in weeks
             let components = Calendar.current.dateComponents([.weekOfYear], from: firstWeek, to: Date())
             let weekDiff = components.weekOfYear
             let length = statsFound.ticketsCompleted.count
+            // while the array does not have enough entries to support
+            // the new date, add empty week values to the array
             var index = length
             while index <= (weekDiff ?? 0) {
                 statsFound.ticketsCompleted.append(0)
                 index = index + 1
                 
             }
+            // if the ticket was toggled completed, increment
             if (increment) {
                 statsFound.ticketsCompleted[weekDiff ?? 0] = statsFound.ticketsCompleted[weekDiff ?? 0] + 1
             }
+            // if the ticket was toggled uncomplete, decrement
             else {
                 statsFound.ticketsCompleted[weekDiff ?? 0] = statsFound.ticketsCompleted[weekDiff ?? 0] - 1
             }

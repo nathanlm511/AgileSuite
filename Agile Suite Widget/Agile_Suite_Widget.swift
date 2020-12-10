@@ -51,10 +51,12 @@ struct SimpleEntry: TimelineEntry {
 struct Agile_Suite_WidgetEntryView : View {
     var entry: Provider.Entry
     
+    // grab te quote from the API
     let foundQuote = obtainQuoteDataFromApi()
     
     var body: some View {
         ZStack {
+            // set the background color to a light blue
             Color(red: 215/255, green: 249/255, blue: 244/255)
             VStack {
                 Text(foundQuote.quote)
