@@ -56,9 +56,9 @@ struct TicketDetails: View {
             Section(header: Text("Ticket Date Created")) {
                 Text(ticket.dateCreated!)
             }
-            Section(header: Text("Toggle Completed")) {
+            Section(header: Text("Toggle Completion")) {
                 Button(action: toggleCompleted) {
-                    Text("Toggle Completed")
+                    Text("Toggle Completion")
                         .padding(5)
                         .padding(.horizontal)
                 }.background(
