@@ -10,16 +10,22 @@ import SwiftUI
 
 struct Quotes: View {
     var body: some View {
-        List {
-            ForEach(quotesFound, id: \.self)
-            { quote in
-                VStack {
-                    Text(quote.quote)
-                    Text(quote.author)
+        VStack {
+            Text("Quote of the day: ")
+                .foregroundColor(Color.blue)
+                .font(.largeTitle)
+            List {
+                ForEach(quotesFound, id: \.self)
+                { quote in
+                    VStack {
+                        Text(quote.quote)
+                        Text("- \(quote.author)")
+                    }
                 }
+               
             }
-           
         }
+        
     }
 }
 

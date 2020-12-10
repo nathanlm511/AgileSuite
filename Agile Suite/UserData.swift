@@ -25,14 +25,17 @@ final class UserData: ObservableObject {
     var timerSeconds: UInt8 = 0
     var timerMilliseconds: UInt8 = 0
     var timerEndedOnce: Bool = false
+    
+    var timerLength: Double = 10
    
     @Published var gamePlayDuration = ""
    
-    public func startDurationTimer() {
+    public func startDurationTimer(timerDuration: Int) {
         /*
          Schedule a timer to invoke the updateTimeLabel() function given below
          after 0.01 second in a loop that repeats itself until it is stopped.
          */
+        timerLength = Double(timerDuration)
         durationTimer = Timer.scheduledTimer(timeInterval: 0.01,
                                              target: self,
                                              selector: (#selector(self.updateTimeLabel)),
@@ -52,7 +55,7 @@ final class UserData: ObservableObject {
    
     @objc func updateTimeLabel(){
         // Calculate total time since timer started in seconds
-        timeElapsed = 10 - (Date().timeIntervalSinceReferenceDate - startTime)
+        timeElapsed = timerLength - (Date().timeIntervalSinceReferenceDate - startTime)
         
         if (timeElapsed >= 0) {
             // Calculate hours

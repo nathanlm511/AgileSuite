@@ -11,15 +11,27 @@ import SwiftUICharts
 
 struct Graphs: View {
     
+    
     // ❎ CoreData FetchRequest returning all Stats entities in the database
     @FetchRequest(fetchRequest: Stats.allStatsFetchRequest()) var allStats: FetchedResults<Stats>
     
     var body: some View {
-        VStack {
-            Text("First week starts at date: \(allStats[0].firstDate)")
-            LineView(data: allStats[0].ticketsCreated, title: "Weekly Tickets Created ")
-            LineView(data: allStats[0].ticketsCompleted, title: "Weekly Tickets Completed")
+        ZStack {
+            VStack {
+                dateText
+                LineView(data: allStats[0].ticketsCreated, title: "Weekly Tickets Created ")
+                LineView(data: allStats[0].ticketsCompleted, title: "Weekly Tickets Completed")
+            }
         }
         
+    }
+    
+    var dateText: AnyView {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy/MM/dd"
+        let firstDateAdded = dateFormatter.string(from: allStats[0].firstDate)
+        return AnyView(
+            Text("First week starts at date: \(firstDateAdded)")
+        )
     }
 }

@@ -16,43 +16,58 @@ struct Break: View {
     
     @State private var onBreak = false
     
+    @State var timerDuration = "10"
+    
+    @State private var showInvalidDurationAlert = false
+    
     var body: some View {
         VStack (alignment: .center) {
+            Text("Take a Break!")
+                .foregroundColor(Color.red)
+                .font(.largeTitle)
+                .padding(6)
+            Text("Enter the break duration below: ")
             HStack {
-                if !onBreak {
-                    //-----------------
-                    // Start Break Button
-                    //-----------------
-                    Button(action: {
-                        self.startBreak()
-                    }) {
-                        Text("Start Break")
-                            .padding(5)
-                            .padding(.horizontal)
-                    }
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .strokeBorder(Color.blue, lineWidth: 1)
-                        )
+                Spacer()
+                TextField("Break Duration: ", text: $timerDuration)
+                    .keyboardType(.numberPad)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Spacer()
+            }
+                
+            if !onBreak {
+                //-----------------
+                // Start Break Button
+                //-----------------
+                Button(action: {
+                    self.startBreak(timerDuration: timerDuration)
+                }) {
+                    Text("Start Break")
+                        .padding(5)
+                        .padding(.horizontal)
                 }
-                else {
-                    //--------------
-                    // Stop Break Button
-                    //--------------
-                    Button(action: {
-                        self.stopBreak()
-                    }) {
-                        Text("Stop Break")
-                            .padding(5)
-                            .padding(.horizontal)
-                    }
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .strokeBorder(Color.blue, lineWidth: 1)
-                        )
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .strokeBorder(Color.blue, lineWidth: 1)
+                    )
+                .alert(isPresented: $showInvalidDurationAlert, content: { self.invalidDurationAlert })
+            }
+            else {
+                //--------------
+                // Stop Break Button
+                //--------------
+                Button(action: {
+                    self.stopBreak()
+                }) {
+                    Text("Stop Break")
+                        .padding(5)
+                        .padding(.horizontal)
                 }
-               
-            }   // End of HStack
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .strokeBorder(Color.blue, lineWidth: 1)
+                    )
+            }
             
             //-------------------------
             // Break Duration Timer
@@ -70,9 +85,29 @@ struct Break: View {
      MARK: - Start Break
      -----------------
      */
-    func startBreak() {
-        self.userData.startDurationTimer()
-        onBreak = true
+    func startBreak(timerDuration: String) {
+        if (Int(timerDuration) != nil){
+            self.userData.startDurationTimer(timerDuration: Int(timerDuration) ?? 10)
+            onBreak = true
+        }
+        else {
+            self.showInvalidDurationAlert = true
+        }
+    }
+    
+    /*
+     --------------------------------
+     MARK: - Invalid timer duration
+     --------------------------------
+     */
+    var invalidDurationAlert: Alert {
+        Alert(title: Text("Invalid timer duration!"),
+              message: Text("Timer duration must be an int"),
+              dismissButton: .default(Text("OK")) )
+        /*
+         Tapping OK resets @State var showMissingInputDataAlert to false.
+         In this example, no action is taken when OK is tapped.
+         */
     }
     
     /*

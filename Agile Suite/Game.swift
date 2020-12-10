@@ -24,6 +24,10 @@ struct Game: View {
     
     var body: some View {
         VStack {
+            Text("Let's Play a Game :)")
+                .foregroundColor(Color.orange)
+                .font(.largeTitle)
+                .padding(5)
             Text("Get the apple inside the hole!")
             ZStack(alignment: .leading) {
                 AnyView(Hole)
