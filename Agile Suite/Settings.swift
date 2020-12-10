@@ -24,7 +24,7 @@ struct Settings: View {
     @State private var selectedIndex = 0
     
     var body: some View {
-        
+        NavigationView {
             Form {
                 Section(header: Text("Show Entered Values")) {
                     Toggle(isOn: $showEnteredValues) {
@@ -42,9 +42,6 @@ struct Settings: View {
                     }
                     
                 }
-                
-                
-                
                 Section(header: Text("Enter Answer to selected security question")) {
                     HStack {
                         if self.showEnteredValues {
@@ -155,6 +152,8 @@ struct Settings: View {
                     .alert(isPresented: $showUnmatchedPasswordAlert, content: { self.unmatchedPasswordAlert })
                 }
             }
+        }
+
         }
         
 
