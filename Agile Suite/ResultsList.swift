@@ -14,7 +14,7 @@ struct ResultsList: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
-    // ❎ CoreData FetchRequest returning all Song entities in the database
+    // ❎ CoreData FetchRequest returning all Project entities in the database
     @FetchRequest(fetchRequest: Project.filteredProjectsFetchRequest(searchCategory: searchCategory, searchQuery: searchQuery)) var filteredProjects: FetchedResults<Project>
     
     var body: some View {
@@ -30,7 +30,7 @@ struct ResultsList: View {
                 }
                 
             }   // End of List
-            .navigationBarTitle(Text("Contacts Found"), displayMode: .inline)
+            .navigationBarTitle(Text("Projects Found"), displayMode: .inline)
         }   // End of if
     }
 }
