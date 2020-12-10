@@ -243,11 +243,11 @@ public func obtainQuoteDataFromApi() {
      Upon completion of the task, the Completion Handler code is executed.
      The waiting ends when .signal() fires or timeout period of 10 seconds expires.
     */
+ 
+    _ = semaphore.wait(timeout: .now() + 10)
     
     if quotesFound.count < 1 {
         quotesFound.append(Quote(quote: "The way to get started is to quit talking and begin doing", author: "Walt Disney"))
     }
- 
-    _ = semaphore.wait(timeout: .now() + 10)
  
 }
