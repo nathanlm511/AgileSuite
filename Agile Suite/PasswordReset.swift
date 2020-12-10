@@ -70,6 +70,7 @@ struct PasswordReset: View {
             }
             
         }
+        .navigationBarTitle(Text("Reset Password"), displayMode: .inline)
     }
     
 }

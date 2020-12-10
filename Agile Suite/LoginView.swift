@@ -98,11 +98,10 @@ struct LoginView : View {
                                 }
                                 
                             } // end of if statement
-                            
-                            
-                            
-                            
+
                         } // End of HStack
+                        
+                        // Adding this will allow the user to authenticate on login view startup
                         .onAppear(perform: authenticate)
                     }   // End of VStack
                 }   // End of ScrollView
