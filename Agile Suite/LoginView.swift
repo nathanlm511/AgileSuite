@@ -8,6 +8,11 @@
 
 import Foundation
 import SwiftUI
+/*
+ ------------------------------
+ MARK: - import needed for biometrics
+ ------------------------------
+ */
 import LocalAuthentication
 
 struct LoginView : View {
@@ -17,20 +22,20 @@ struct LoginView : View {
     
     @State private var enteredPassword = ""
     @State private var showInvalidPasswordAlert = false
+    /*
+     -----------------------------------------------------------------
+     MARK: - State Variable that will store whether the app is showing
+     it's protected data or not
+     -----------------------------------------------------------------
+     */
     @State private var isUnlocked = false
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.gray.opacity(0.1).edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-//                        Image("Welcome")
-//                            .padding(.top, 30)
-                        
-//                        Text("")
-//                            .font(.headline)
-//                            .padding()
-                        
                         Image("login_image")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -53,7 +58,8 @@ struct LoginView : View {
                                 let validPassword = UserDefaults.standard.string(forKey: "Password")
                                 
                                 /*
-                                 If the user has not yet set a password, validPassword = nil
+                                 If the user has not yet set a password, validPassword = nil. Or if the entered passwordf is correct. Or if the FaceID authentication is correct.
+                                 
                                  In this case, allow the user to login.
                                  */
                                 
@@ -77,22 +83,22 @@ struct LoginView : View {
                                 
                             } // end of button
                             
+                            
+                            let validPassword = UserDefaults.standard.string(forKey: "Password")
+                            
+                            if validPassword != nil {
                                 
-                                let validPassword = UserDefaults.standard.string(forKey: "Password")
+                                NavigationLink(destination: PasswordReset()) {
+                                    Text("Forgot Password")
+                                        .frame(width: 220, height: 36, alignment: .center)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .strokeBorder(Color.black, lineWidth: 1)
+                                        )
+                                }
                                 
-                                if validPassword != nil {
-                                    
-                                    NavigationLink(destination: PasswordReset()) {
-                                        Text("Forgot Password")
-                                            .frame(width: 220, height: 36, alignment: .center)
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 16)
-                                                    .strokeBorder(Color.black, lineWidth: 1)
-                                            )
-                                    }
-                                    
-                                } // end of if statement
-                                
+                            } // end of if statement
+                            
                             
                             
                             
@@ -118,15 +124,21 @@ struct LoginView : View {
         // Tapping OK resets @State var showInvalidPasswordAlert to false.
     }
     
+    /*
+     ------------------------------------
+     MARK: - Create authenticate function
+     for use in Face ID
+     ------------------------------------
+     */
     func authenticate() {
         let context = LAContext()
         var error: NSError?
-
+        
         // check whether biometric authentication is possible
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             // it's possible, so go ahead and use it
             let reason = "We need to unlock your data."
-
+            
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                 // authentication has now completed
                 DispatchQueue.main.async {
@@ -141,9 +153,9 @@ struct LoginView : View {
         } else {
             // no biometrics
         }
-}
-
-
+    }
+    
+    
 }
 
 struct LoginView_Previews: PreviewProvider {
